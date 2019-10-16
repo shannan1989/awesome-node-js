@@ -1,3 +1,4 @@
+const chalk = require('chalk');
 const puppeteer = require('puppeteer');
 const devices = require('puppeteer/DeviceDescriptors');
 
@@ -7,8 +8,11 @@ const height = 1080;
 (async () => {
     const browser = await puppeteer.launch({
         headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+        devtools: true,
+        args: ['--no-first-run', '-no-zygote', '--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu', '--disable-dev-shm-usage']
     });
+
+    console.log(chalk.green('start'));
 
     const page = await browser.newPage();
 
@@ -38,6 +42,10 @@ const height = 1080;
     });
     console.log('dimensions', dimensions);
 
+    page.on('error', () => {});
+    page.on('request', () => {});
+    page.on('response', () => {});
+
     await page.screenshot({
         path: 'screenshot.png'
     });
@@ -48,4 +56,6 @@ const height = 1080;
     });
 
     await browser.close();
+
+    console.log(chalk.yellow('finish'));
 })();
