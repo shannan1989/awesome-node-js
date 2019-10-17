@@ -42,9 +42,9 @@ const height = 1080;
     });
     console.log('dimensions', dimensions);
 
-    page.on('error', () => {});
-    page.on('request', () => {});
-    page.on('response', () => {});
+    page.on('error', () => { });
+    page.on('request', () => { });
+    page.on('response', () => { });
 
     await page.screenshot({
         path: 'screenshot.png'
