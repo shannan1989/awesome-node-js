@@ -1,0 +1,27 @@
+{
+  "name": "awesome-node-js",
+  "version": "0.0.1",
+  "description": "awesome node.js",
+  "main": "index.js",
+  "scripts": {
+    "puppeteer-baidu": "node src/puppeteer/baidu.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shannan1989/awesome-node-js.git"
+  },
+  "keywords": [
+    "node",
+    "puppeteer"
+  ],
+  "author": "山南",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shannan1989/awesome-node-js/issues"
+  },
+  "homepage": "https://github.com/shannan1989/awesome-node-js#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "puppeteer": "^1.20.0"
+  }
+}
