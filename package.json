@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/shannan1989/awesome-node-js#readme",
   "dependencies": {
-    "chalk": "^4.0.0",
+    "chalk": "^5.0.1",
     "internet-available": "^1.0.0",
-    "puppeteer": "^3.0.2"
+    "puppeteer": "^13.5.2"
   }
 }
